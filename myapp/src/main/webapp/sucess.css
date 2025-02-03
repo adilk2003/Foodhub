@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Checkmark Animation */
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkmark {
+    width: 100px;
+    height: 100px;
+    stroke: #4CAF50;
+}
+
+.checkmark-circle {
+    stroke-dasharray: 157;
+    stroke-dashoffset: 157;
+    stroke-width: 4;
+    stroke: #4CAF50;
+    fill: none;
+    animation: drawCircle 1s ease-out forwards;
+}
+
+.checkmark-check {
+    stroke-dasharray: 36;
+    stroke-dashoffset: 36;
+    stroke-width: 4;
+    stroke: #4CAF50;
+    stroke-linecap: round;
+    animation: drawCheck 0.5s 1s ease-out forwards;
+}
+
+/* Text Animation */
+.thank-you-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.message {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Button */
+.home-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+}
+
+/* Keyframe Animations */
+@keyframes drawCircle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawCheck {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

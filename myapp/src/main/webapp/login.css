@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.left {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right {
+  width: 50%;
+  background-image: url("https://t3.ftcdn.net/jpg/02/52/38/80/360_F_252388016_KjPnB9vglSCuUJAumCDNbmMzGdzPAucK.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #FF6600;
+}
+
+.logo img {
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+.welcome-text {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input[type="username"],
+input[type="password"] {
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember-me input {
+  margin-right: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions a {
+  text-decoration: none;
+  color: #FF6600;
+  font-size: 14px;
+}
+
+.sign-in-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #FF6600;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-in-button:hover {
+  background-color: #E65C00;
+}
+
+.sign-up-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.sign-up-link a {
+  text-decoration: none;
+  color: #FF6600;
+  font-weight: bold;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .right {
+    height: 200px; /* Set a specific height for mobile */
+    background-position: center;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .welcome-text {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input[type="username"],
+  input[type="password"] {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+    gap: 20px;
+  }
+
+  .actions a {
+    font-size: 12px;
+  }
+
+  .sign-in-button {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .sign-up-link {
+    font-size: 12px;
+  }
+}
